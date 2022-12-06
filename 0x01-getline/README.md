@@ -31,4 +31,4 @@
 
 2. Handle multiple file descriptors.
 
-    when called with -1 you should free everything and reset all your static variables.
+    when called with -1 you should free everything and reset all your static variables
