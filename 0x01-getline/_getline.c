@@ -1,7 +1,7 @@
 #include "_getline.h"
 
 /**
- * _getline - returns an entire line from the given file descriptor
+ * *_getline - returns an entire line from the given file descriptor
  * @fd: file descripter
  *
  * Return: an entire line from the file
