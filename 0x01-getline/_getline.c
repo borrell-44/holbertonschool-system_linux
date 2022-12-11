@@ -1,5 +1,12 @@
 #include "_getline.h"
 
+/**
+ * _getline - returns an entire line from the given file descriptor
+ * @fd: file descripter
+ *
+ * Return: an entire line from the file
+ */
+
 char *_getline(const int fd)
 {
     char *buffer;
