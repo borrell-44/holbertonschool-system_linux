@@ -7,7 +7,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define READ_SIZE 500
+#define READ_SIZE 11
 
 /**
  * struct list_c - singly linked list

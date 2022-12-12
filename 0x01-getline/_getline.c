@@ -22,16 +22,16 @@ char *_getline(const int fd)
 
 	if (sz > 0)
 	{
-		 for (i = 0; i < sz || buffer[i] != '\0'; i++)
+		for (i = 0; i <= sz || buffer[i] != '\0'; i++)
 		{
-			if (buffer[i] == '\0')
+			if (buffer[i] == '\n')
 			{
 				buffer[i] = '\0';
 				return (buffer);
 			}
 		}
 
-		buffer[sz] = '\0';
+		buffer[sz + 1] = '\0';
 	
 		/**
 		* printf("%d", READ_SIZE);
