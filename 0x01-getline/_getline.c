@@ -10,11 +10,7 @@
 char *_getline(const int fd)
 {
 	char *buffer;
-	/**
-	* int i;
-	* char * ph = "Hello World";
-	*/
-	size_t sz;
+	size_t sz, i;
 
 	buffer = malloc(sizeof(char) * (READ_SIZE + 1));
 	if (buffer == NULL)
@@ -23,19 +19,20 @@ char *_getline(const int fd)
 	}
 
 	sz = read(fd, buffer, READ_SIZE);
+
 	if (sz > 0)
 	{
-		/**
-		* for (i = 0; i < sz || buffer[i] != '\0'; i++)
-		* {
-		*	if (buffer[i] == '\0')
-		*	{
-		*		buffer[i + 1] = '\0';
-		*		return (buffer);
-		*	}
-		* }
-		*/
-		buffer[sz + 1] = '\0';
+		 for (i = 0; i < sz || buffer[i] != '\0'; i++)
+		{
+			if (buffer[i] == '\0')
+			{
+				buffer[i] = '\0';
+				return (buffer);
+			}
+		}
+
+		buffer[sz] = '\0';
+	
 		/**
 		* printf("%d", READ_SIZE);
 		* printf("\n\n%c\n\n", buffer[READ_SIZE]);
