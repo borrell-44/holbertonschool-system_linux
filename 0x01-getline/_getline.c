@@ -12,7 +12,7 @@ char *_getline(const int fd)
 	char *buffer;
 	size_t sz, i;
 
-	buffer = malloc(sizeof(char) * (READ_SIZE + 1));
+	buffer = malloc(sizeof(char) * (READ_SIZE));
 	if (buffer == NULL)
 	{
 		return (NULL);
@@ -31,8 +31,8 @@ char *_getline(const int fd)
 			}
 		}
 
-		buffer[sz] = '\0';
-	
+		buffer[sz + 1] = '\0';
+
 		/**
 		* printf("%d", READ_SIZE);
 		* printf("\n\n%c\n\n", buffer[READ_SIZE]);
