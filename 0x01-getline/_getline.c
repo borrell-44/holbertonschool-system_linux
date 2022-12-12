@@ -31,7 +31,7 @@ char *_getline(const int fd)
 			}
 		}
 
-		buffer[sz + 1] = '\0';
+		buffer[sz] = '\0';
 	
 		/**
 		* printf("%d", READ_SIZE);
